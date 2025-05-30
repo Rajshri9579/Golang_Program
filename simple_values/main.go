@@ -14,4 +14,5 @@ func main() {
 
 	//floats
 	fmt.Println(10.67)
+	fmt.Println(10.68 / 2)
 }
