@@ -18,10 +18,17 @@ func main(){
 
 
 	//classic for loop
-	for i := 0; i < 3; i++ {
+	for i := 0; i <= 3; i++ {
 		if i == 2{
 			continue
 		}
+		if i == 3{
+			break
+		}
 		fmt.Println(i)
+	}
+
+	for i := range 3 {
+		fmt.Println(i)//will start from 0 & 3 will be excluded
 	}
 }
