@@ -73,7 +73,7 @@ func main(){
 
 
 	
-	//STRUCT EMBEDDING
+	//struct embedding
 
 
 	myCustomer := customer{
@@ -91,7 +91,5 @@ func main(){
 	myOrder.customer.name = "raj"
 	fmt.Println(myOrder)
 	fmt.Println(myOrder.customer)
-
-
 	
 }
