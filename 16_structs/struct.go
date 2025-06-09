@@ -2,11 +2,24 @@ package main
 
 import (
 	"fmt"
+	"time"
 	// "time"
 )
 
-//order struct
+type customer struct {
+	name string 
+	phone string
+}
 
+type order struct {
+	id  string
+	amount float32
+	status string
+	createdAt time.Time
+	customer
+}
+
+//order struct
 // type order struct {
 // 	id string
 // 	amount float32
@@ -34,6 +47,7 @@ import (
 // 	return o.amount
 // }
 
+
 func main(){
 	//if you don't set any field, default values is set
 	// myOrder := order{
@@ -50,19 +64,34 @@ func main(){
 	// fmt.Println(myOrder.status)
 
 
+	// language := struct {
+	// 	name string
+	// 	isGood bool
+	// } {"golang", true}
+
+	// fmt.Println(language)
 
 
+	
+	//STRUCT EMBEDDING
 
 
+	myCustomer := customer{
+		name: "john",
+		phone: "776567554",
+	}
+
+	myOrder := order {
+		id: "7",
+		amount: 45,
+		status: "received",
+		customer: myCustomer, // can also be done inline....
+	}
+
+	myOrder.customer.name = "raj"
+	fmt.Println(myOrder)
+	fmt.Println(myOrder.customer)
 
 
-
-
-
-	language := struct {
-		name string
-		isGood bool
-	} {"golang", true}
-
-	fmt.Println(language)
+	
 }
